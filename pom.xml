@@ -14,7 +14,7 @@
     <name>TicketVendingMachine</name>
     <description>A coding test for a travel ticket vending machine</description>
     <properties>
-        <java.version>17</java.version>
+        <!--java.version>17</java.version-->
         <vaadin.version>14.8.4</vaadin.version>
     </properties>
     <dependencies>
@@ -43,7 +43,7 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
-        
+
     </dependencies>
 
     <dependencyManagement>
