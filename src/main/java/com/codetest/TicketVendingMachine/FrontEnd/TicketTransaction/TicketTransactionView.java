@@ -42,7 +42,7 @@ public class TicketTransactionView extends VerticalLayout implements HasUrlParam
         hz.add(euroLabel);
 
         grid.setSizeFull();
-        grid.addColumn(Coin::getCoinValueName);
+        grid.addColumn(coin -> coin.getCoinValueName());
         grid.addComponentColumn(coin -> addCoinButton(coin, totalMoneyValueLabel));
         grid.setItems(ticketTransactionViewController.getCoinList());
 

@@ -19,9 +19,9 @@ public class DestinationView extends VerticalLayout {
         var grid = new Grid<Destination>();
 
         grid.setSizeFull();
-        grid.addColumn(Destination::getName).setHeader("Name");
-        grid.addColumn(Destination::getDate).setHeader("Date");
-        grid.addColumn(Destination::getPrice).setHeader("Price");
+        grid.addColumn(destination -> destination.getName()).setHeader("Name");
+        grid.addColumn(destination -> destination.getDate()).setHeader("Date");
+        grid.addColumn(destination -> destination.getPrice()).setHeader("Price");
         grid.setItems(destinationViewController.getDestinations());
         grid.addSelectionListener(event -> destinationViewController.navigateToSeatsView(this, event.getFirstSelectedItem()));
         add(grid);

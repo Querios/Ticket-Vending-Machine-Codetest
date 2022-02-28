@@ -26,10 +26,10 @@ public class SeatView extends VerticalLayout implements HasUrlParameter<Long> {
         var grid = new Grid<Seat>();
 
         grid.setSizeFull();
-        grid.addColumn(Seat::getId).setHeader("ID");
-        grid.addColumn(Seat::getDestinationName).setHeader("Destination");
-        grid.addColumn(Seat::getSeatNo).setHeader("Seat Number");
-        grid.addColumn(Seat::isAvailableAsText).setHeader("Availability");
+        grid.addColumn(seat -> seat.getId()).setHeader("ID");
+        grid.addColumn(seat -> seat.getDestinationName()).setHeader("Destination");
+        grid.addColumn(seat -> seat.getSeatNo()).setHeader("Seat Number");
+        grid.addColumn(seat -> seat.isAvailableAsText()).setHeader("Availability");
         grid.setItems(seatViewController.getSeats());
 
         grid.addSelectionListener(eventListenerEvent -> seatViewController.navigateToTicketSummaryView(this, eventListenerEvent.getFirstSelectedItem()));

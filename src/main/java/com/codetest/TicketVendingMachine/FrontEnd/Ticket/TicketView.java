@@ -23,11 +23,11 @@ public class TicketView extends VerticalLayout {
         var grid = new Grid<Ticket>();
 
         grid.setSizeFull();
-        grid.addColumn(Ticket::getDestinationName).setHeader("Destination");
-        grid.addColumn(Ticket::getDestinationDate).setHeader("Date");
-        grid.addColumn(Ticket::getSeatNo).setHeader("Seat Number");
-        grid.addColumn(Ticket::getDestinationPrice).setHeader("Price");
-        grid.addColumn(Ticket::getDateCreated).setHeader("Date Bought");
+        grid.addColumn(ticket -> ticket.getDestinationName()).setHeader("Destination");
+        grid.addColumn(ticket -> ticket.getDestinationDate()).setHeader("Date");
+        grid.addColumn(ticket -> ticket.getSeatNo()).setHeader("Seat Number");
+        grid.addColumn(ticket -> ticket.getDestinationPrice()).setHeader("Price");
+        grid.addColumn(ticket -> ticket.getDateCreated()).setHeader("Date Bought");
         grid.addComponentColumn(this::sellTicketButton);
         grid.setItems(ticketViewController.getTickets());
 
