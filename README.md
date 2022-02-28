@@ -7,7 +7,12 @@ I decided to learn and use Spring Boot for the API and Vaadin UI for the UI of t
 This is also uploaded to Heroku for easier checking of the code. Link: https://java-ticket-vending-machine.herokuapp.com/Home
 
 Other info:
+
   Maven Project
+  
   Java jdk-7.0.2
+  
   Spring Boot 2.6.4
+  
   Packaging Jar
+  
