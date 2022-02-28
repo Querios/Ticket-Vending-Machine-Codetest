@@ -1,5 +1,6 @@
 package com.codetest.TicketVendingMachine.FrontEnd.Destination;
 
+import com.codetest.TicketVendingMachine.Classes.Coin.Coin;
 import com.codetest.TicketVendingMachine.Classes.Destination.Destination;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.grid.Grid;
@@ -16,7 +17,7 @@ public class DestinationView extends VerticalLayout {
 
     @Autowired
     public DestinationView(DestinationViewController destinationViewController) {
-        var grid = new Grid<Destination>();
+        Grid<Destination>  grid = new Grid<Destination>();
 
         grid.setSizeFull();
         grid.addColumn(destination -> destination.getName()).setHeader("Name");

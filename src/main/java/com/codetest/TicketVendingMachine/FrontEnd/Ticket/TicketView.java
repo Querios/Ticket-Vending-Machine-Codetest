@@ -20,7 +20,7 @@ public class TicketView extends VerticalLayout {
     @Autowired
     public TicketView(TicketViewController ticketViewController) {
         this.ticketViewController = ticketViewController;
-        var grid = new Grid<Ticket>();
+        Grid<Ticket> grid = new Grid<Ticket>();
 
         grid.setSizeFull();
         grid.addColumn(ticket -> ticket.getDestinationName()).setHeader("Destination");

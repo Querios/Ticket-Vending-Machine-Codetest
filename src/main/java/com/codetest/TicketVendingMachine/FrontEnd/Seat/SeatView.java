@@ -2,6 +2,7 @@ package com.codetest.TicketVendingMachine.FrontEnd.Seat;
 
 import com.codetest.TicketVendingMachine.Classes.Destination.Destination;
 import com.codetest.TicketVendingMachine.Classes.Seat.Seat;
+import com.codetest.TicketVendingMachine.Classes.Ticket.Ticket;
 import com.codetest.TicketVendingMachine.FrontEnd.Destination.DestinationViewController;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.grid.Grid;
@@ -23,7 +24,7 @@ public class SeatView extends VerticalLayout implements HasUrlParameter<Long> {
     @Override
     public void setParameter(BeforeEvent event, Long parameter) {
         seatViewController.setDestinationId(parameter);
-        var grid = new Grid<Seat>();
+        Grid<Seat> grid = new Grid<Seat>();
 
         grid.setSizeFull();
         grid.addColumn(seat -> seat.getId()).setHeader("ID");

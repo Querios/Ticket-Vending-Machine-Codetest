@@ -1,6 +1,7 @@
 package com.codetest.TicketVendingMachine.FrontEnd.TicketTransaction;
 
 import com.codetest.TicketVendingMachine.Classes.Coin.Coin;
+import com.codetest.TicketVendingMachine.Classes.Ticket.Ticket;
 import com.codetest.TicketVendingMachine.Classes.Ticket.TicketItem;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.grid.Grid;
@@ -24,7 +25,7 @@ public class TicketTransactionView extends VerticalLayout implements HasUrlParam
     public void setParameter(BeforeEvent event, Long parameter) {
         ticketTransactionViewController.setSeatId(parameter);
 
-        var grid = new Grid<Coin>();
+        Grid<Coin> grid = new Grid<Coin>();
 
         HorizontalLayout hz = new HorizontalLayout();
         Label ticketPriceLabel = new Label("Ticket Price: ");
