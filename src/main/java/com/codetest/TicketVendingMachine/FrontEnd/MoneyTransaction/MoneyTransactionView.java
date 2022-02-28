@@ -21,6 +21,7 @@ public class MoneyTransactionView extends VerticalLayout {
     @Autowired
     public MoneyTransactionView(MoneyTransactionController moneyTransactionController) {
 
+        /*
         Map<String, Integer> coinValuesMap = Map.of(
                 "one", 1,
                 "two", 2,
@@ -55,5 +56,6 @@ public class MoneyTransactionView extends VerticalLayout {
         add(btn);
 
         setSizeFull();
+        */
     }
 }
